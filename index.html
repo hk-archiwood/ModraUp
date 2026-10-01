@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="OpenSketch3D，一款免费使用的桌面 3D 建模工具，支持 macOS、Windows 和 Linux。探索直观的绘图与推拉、组与组件、材质样式和 Ruby 扩展。">
+  <meta name="theme-color" content="#2761ef">
+  <title>OpenSketch3D — 让想法，成为空间。</title>
+  <link rel="alternate" hreflang="en" href="en.html">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="brand" aria-label="OpenSketch3D 首页"><img src="assets/logo.png" alt="" width="36" height="36"><span>OpenSketch<span class="brand-3d">3D</span></span></a>
+    <nav aria-label="主导航"><a href="#features">功能探索</a><a href="#workflow">建模流程</a><a href="#questions">常见问题</a></nav>
+    <div class="header-actions"><a class="header-link" href="#project">项目进展 <span class="version">开发中</span></a><a class="language-switch" href="en.html" lang="en" hreflang="en" aria-label="Switch to English">English</a></div>
+  </header>
+  <main>
+    <section class="hero wrap">
+      <div class="eyebrow"><span class="small-cube">◇</span> A NEW SPACE FOR YOUR IDEAS <span class="hero-tag">桌面 3D 建模</span></div>
+      <div class="hero-row"><div><h1>让想法，<br>成为<span class="blue">空间。</span></h1><p class="hero-copy">从第一根线条，到完整的三维模型。<br>用熟悉的绘图、推拉与组件工作流，<br class="mobile-break">把创作留给自己。</p><div class="hero-actions"><a class="button primary" href="#demo">查看实机截图</a><a class="button secondary" href="#features">了解现有功能</a></div><p class="hero-note">免费使用 <span>·</span> macOS / Windows / Linux</p></div><div class="hero-aside"><span class="aside-rule"></span><p>DRAW.<br>SHAPE.<br>CREATE.</p><span>直观构建，自由表达。</span></div></div>
+    </section>
+
+    <section class="demo-section wrap" id="demo" aria-label="软件实机截图">
+      <div class="gallery-heading"><span class="section-kicker">INSIDE OPENSKETCH3D</span><span class="real-capture">macOS · 实机截图</span></div>
+      <figure class="screenshot-panel" id="screenshot-panel" role="tabpanel" aria-labelledby="shot-tab-0">
+        <button class="screenshot-open" id="screenshot-open" aria-label="放大查看：Box 与阴影" aria-haspopup="dialog"><span class="capture-frame"><img id="screenshot-main" class="capture-image" src="assets/box-shadows.png" alt="OpenSketch3D 实机截图：简单 Box 与地面阴影" width="3456" height="2052" fetchpriority="high"><span class="paint-recolor" aria-hidden="true"></span></span><span class="screenshot-zoom">放大查看</span></button>
+        <figcaption class="screenshot-caption"><div aria-live="polite"><h2 id="screenshot-title">Box 与阴影</h2><p id="screenshot-description">简单体块与地面投影，展示基础建模和阴影效果。</p></div><span id="screenshot-count">01 / 05</span></figcaption>
+      </figure>
+      <div class="screenshot-tabs" role="tablist" aria-label="实机截图分类">
+        <button class="screenshot-tab" id="shot-tab-0" role="tab" aria-selected="true" aria-controls="screenshot-panel" data-screenshot="0" tabindex="0"><span class="capture-frame"><img src="assets/box-shadows.png" class="capture-image" alt="" width="3456" height="2052" loading="lazy"><span class="paint-recolor" aria-hidden="true"></span></span><span><b>01</b> Box 与阴影</span></button>
+        <button class="screenshot-tab" id="shot-tab-1" role="tab" aria-selected="false" aria-controls="screenshot-panel" data-screenshot="1" tabindex="-1"><span class="capture-frame"><img src="assets/ruby-3d-text.png" class="capture-image" alt="" width="3456" height="2052" loading="lazy"><span class="paint-recolor" aria-hidden="true"></span></span><span><b>02</b> 脚本创建 3D 文字</span></button>
+        <button class="screenshot-tab" id="shot-tab-2" role="tab" aria-selected="false" aria-controls="screenshot-panel" data-screenshot="2" tabindex="-1"><span class="capture-frame"><img src="assets/section-planes.png" class="capture-image" alt="" width="3456" height="2052" loading="lazy"><span class="paint-recolor" aria-hidden="true"></span></span><span><b>03</b> 剖切功能</span></button>
+        <button class="screenshot-tab" id="shot-tab-3" role="tab" aria-selected="false" aria-controls="screenshot-panel" data-screenshot="3" tabindex="-1"><span class="capture-frame"><img src="assets/large-terrain.png" class="capture-image" alt="" width="3456" height="2052" loading="lazy"><span class="paint-recolor" aria-hidden="true"></span></span><span><b>04</b> 大模型测试 · 地形</span></button>
+        <button class="screenshot-tab" id="shot-tab-4" role="tab" aria-selected="false" aria-controls="screenshot-panel" data-screenshot="4" tabindex="-1"><span class="capture-frame"><img src="assets/large-interior.png" class="capture-image" alt="" width="3456" height="2052" loading="lazy"><span class="paint-recolor" aria-hidden="true"></span></span><span><b>05</b> 大模型测试 · 室内设计</span></button>
+      </div>
+      <dialog class="screenshot-dialog" id="screenshot-dialog" aria-labelledby="lightbox-title">
+        <div class="lightbox-header"><h2 id="lightbox-title">Box 与阴影</h2><div><a id="screenshot-original" href="assets/box-shadows.png" target="_blank" rel="noopener">打开原图</a><button id="lightbox-close" autofocus>关闭</button></div></div>
+        <div class="lightbox-stage"><span class="capture-frame"><img id="lightbox-image" class="capture-image" src="assets/box-shadows.png" alt="OpenSketch3D 实机截图：简单 Box 与地面阴影" width="3456" height="2052"><span class="paint-recolor" aria-hidden="true"></span></span></div>
+        <div class="lightbox-footer"><button id="screenshot-previous">上一张</button><span id="lightbox-count" aria-live="polite">01 / 05</span><button id="screenshot-next">下一张</button></div>
+      </dialog>
+    </section>
+
+    <section class="capability-strip wrap" aria-label="核心能力"><div><span>01</span><strong>直观建模</strong><p>绘图 · 推拉 · 精确变换</p></div><div><span>02</span><strong>有序组织</strong><p>群组 · 组件 · 层级编辑</p></div><div><span>03</span><strong>自由表达</strong><p>材质 · 样式 · 阴影</p></div><div><span>04</span><strong>扩展工作流</strong><p>Ruby API · 插件界面</p></div></section>
+
+    <section class="features wrap section" id="features"><div class="section-heading"><div><p class="section-kicker">BUILT FOR THE WAY YOU THINK</p><h2>熟悉的工具。<br>流畅的创作节奏。</h2></div><p>从绘制到组织，从表达再到扩展。<br>让建模的每一步，都有合适的工具。</p></div>
+      <div class="feature-tabs" role="tablist" aria-label="功能分类"><button id="tab-modeling" role="tab" aria-selected="true" aria-controls="feature-panel" data-feature="modeling">绘图与建模</button><button id="tab-organize" role="tab" aria-selected="false" aria-controls="feature-panel" data-feature="organize" tabindex="-1">群组与组件</button><button id="tab-appearance" role="tab" aria-selected="false" aria-controls="feature-panel" data-feature="appearance" tabindex="-1">材质与表达</button><button id="tab-extend" role="tab" aria-selected="false" aria-controls="feature-panel" data-feature="extend" tabindex="-1">Ruby 扩展</button></div>
+      <div class="feature-panel" id="feature-panel" role="tabpanel" aria-labelledby="tab-modeling" tabindex="0"><div class="feature-copy"><span class="feature-number" id="feature-number">01 / MODELING</span><h3 id="feature-title">画出轮廓，<br>推拉成形。</h3><p id="feature-description">从直线、矩形和圆开始，用推拉赋予平面体积。捕捉端点、中点与交点，配合轴向锁定和数值输入，让直觉与精度一起工作。</p><div class="feature-tags" id="feature-tags"><span>绘图工具</span><span>推拉 / 偏移</span><span>移动 / 旋转 / 缩放</span><span>路径放样</span></div></div><div class="feature-detail" id="feature-detail"><div class="detail-head"><span>把想法变成几何</span><span class="detail-badge">现有能力</span></div><div class="detail-row"><b>R</b><div><strong>从轮廓开始</strong><p>直线、矩形、圆、多边形与圆弧。</p></div></div><div class="detail-row"><b>P</b><div><strong>建立体积</strong><p>沿面法向推拉，支持定距与重复操作。</p></div></div><div class="detail-row"><b>M</b><div><strong>调整到位</strong><p>移动、旋转、缩放，复制与阵列。</p></div></div><div class="detail-footer">推断捕捉 <span>·</span> 轴向锁定 <span>·</span> 数值输入</div></div></div>
+    </section>
+
+    <section class="workflow-section" id="workflow"><div class="wrap section"><div class="section-heading"><div><p class="section-kicker">A SIMPLE PATH TO THREE DIMENSIONS</p><h2>一个想法。三个步骤。</h2></div><p>先构建，再整理，最后表达。<br>从简单体块，逐步完善你的设计。</p></div><div class="steps"><article><span class="step-no">01 <i></i></span><h3>勾勒与成形</h3><p>绘制平面轮廓，用推拉、偏移和路径放样建立几何，再用精确变换调整比例。</p><span class="step-foot">DRAW & SHAPE</span></article><article><span class="step-no">02 <i></i></span><h3>组织与复用</h3><p>把几何整理为群组和组件。进入层级编辑，复用定义，让重复元素保持一致。</p><span class="step-foot">ORGANIZE & REUSE</span></article><article><span class="step-no">03 <i></i></span><h3>赋予表达</h3><p>设置材质、边线样式和阴影，用场景和剖切查看空间，补充文字与 3D 文字。</p><span class="step-foot">STYLE & PRESENT</span></article></div></div></section>
+
+    <section class="project-section wrap section" id="project"><div class="project-card"><div><p class="section-kicker">AN IDEA IN PROGRESS</p><h2>持续打磨，<br>逐步成形。</h2><p>OpenSketch3D 免费使用，支持三大桌面平台。<br>目前处于开发阶段，各项功能正在持续完善。</p><a class="button primary" href="#questions">了解项目状态</a></div><div class="project-facts"><div><span>当前阶段</span><strong>开发中</strong><p>功能与交互持续迭代</p></div><div><span>桌面平台</span><strong>macOS · Windows · Linux</strong><p>支持三大桌面平台</p></div><div><span>项目源码</span><strong>暂未开放</strong><p>此页面用于产品与功能展示</p></div><div><span>模型文件</span><strong>.osk3d / .skp</strong><p>原生保存与 SKP 互换，支持范围见下方说明</p></div></div></div></section>
+
+    <section class="faq wrap section" id="questions"><div class="faq-title"><p class="section-kicker">A FEW THINGS TO KNOW</p><h2>你可能想了解。</h2></div><div class="faq-list"><details open><summary>软件可以免费使用吗？<span>+</span></summary><p>可以。OpenSketch3D 免费使用，支持 macOS、Windows 和 Linux 桌面平台。目前项目源码暂未公开。</p></details><details><summary>现在可以下载使用吗？<span>+</span></summary><p>项目目前处于开发阶段，公开下载渠道和正式版本发布时间尚未确定。本页面展示当前功能，不提供安装包。</p></details><details><summary>OpenSketch3D 已经开源了吗？<span>+</span></summary><p>目前项目源码暂未公开。名称中的 Open 不代表当前已有开源许可或公开源码；如有开放计划，会另行说明。</p></details><details><summary>支持 SketchUp 模型文件吗？<span>+</span></summary><p>支持通过 OpenSKP 导入、导出 .skp 互换文件，原生项目格式为 .osk3d。SKP 互换不覆盖全部特性：含剖切实体的模型需要保存为 .osk3d，模型和场景阴影参数也不会通过 SKP 完整往返。</p></details><details><summary>现有 Ruby 插件可以直接运行吗？<span>+</span></summary><p>项目正在实现与 SketchUp 同名的 Ruby API，已包含扩展加载、Ruby 控制台、工具栏与 HTML 插件界面等能力。API 和行为尚未全部覆盖，具体插件需要逐项验证，暂不承诺完整兼容。</p></details><details><summary>这些展示画面来自哪里？<span>+</span></summary><p>这五张图片均为 OpenSketch3D 的 macOS 实机截图，分别展示 Box 与阴影、脚本创建 3D 文字、剖切功能，以及地形和室内设计大模型的操作测试。大模型截图记录的是特定场景的测试状态，不代表所有模型的性能表现。</p></details></div></section>
+  </main>
+  <footer class="footer wrap"><a href="#" class="brand"><img src="assets/logo.png" alt="" width="30" height="30"><span>OpenSketch<span class="brand-3d">3D</span></span></a><span>让想法，成为空间。</span><span>© <span id="year">2026</span> ArchiNest Software Tech Limited <a href="#project">项目状态</a></span></footer>
+</body>
+</html>
