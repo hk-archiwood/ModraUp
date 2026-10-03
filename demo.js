@@ -1,11 +1,42 @@
 // Screenshot gallery for the standalone product page.
 const isEnglish = document.documentElement.lang === 'en';
 const screenshots = isEnglish ? englishCopy.screenshots : [
-  {src:'assets/box-shadows.png', title:'Box 与阴影', alt:'OpenSketch3D 实机截图：简单 Box 与地面阴影', description:'简单体块与地面投影，展示基础建模和阴影效果。'},
-  {src:'assets/ruby-3d-text.png', title:'脚本创建 3D 文字', alt:'OpenSketch3D 实机截图：Ruby 控制台脚本创建 OpenSketch3D 立体文字', description:'通过 Ruby 控制台创建立体文字，展示脚本与几何生成。'},
-  {src:'assets/section-planes.png', title:'剖切功能', alt:'OpenSketch3D 实机截图：剖切平面与模型内部构造', description:'使用剖切平面查看模型内部结构与构造细节。'},
-  {src:'assets/large-terrain.png', title:'大模型测试 · 地形', alt:'OpenSketch3D 实机截图：地形模型、阴影面板与性能信息', description:'地形模型的操作测试截图，保留视口中的性能信息。'},
-  {src:'assets/large-interior.png', title:'大模型测试 · 室内设计', alt:'OpenSketch3D 实机截图：复杂室内设计模型与性能信息', description:'复杂室内设计模型的操作测试截图，展示场景细节与性能信息。'}
+  {
+    "src": "assets/SmallHouse.png",
+    "title": "阴影效果展示",
+    "alt": "ModraUp 实机截图：小屋模型与地面阴影",
+    "description": "通过小屋模型与地面投影，展示建筑体块的阴影效果。"
+  },
+  {
+    "src": "assets/Add3DText.png",
+    "title": "脚本创建 3D 文字",
+    "alt": "ModraUp 实机截图：Ruby 脚本创建 ModraUp 立体文字",
+    "description": "通过 Ruby 控制台创建 ModraUp 立体文字，展示脚本与几何生成。"
+  },
+  {
+    "src": "assets/Secion.png",
+    "title": "剖切功能展示",
+    "alt": "ModraUp 实机截图：厨房模型与多个剖切平面",
+    "description": "使用多个剖切平面查看厨房模型的内部结构与构造细节。"
+  },
+  {
+    "src": "assets/BigTerrain.png",
+    "title": "大模型测试 · 地形",
+    "alt": "ModraUp 实机截图：地形大模型与性能信息",
+    "description": "地形大模型的操作测试截图，保留视口中的性能信息。"
+  },
+  {
+    "src": "assets/BigModel-1.png",
+    "title": "商业建筑 · 近景",
+    "alt": "ModraUp 实机截图：室外商业建筑大模型的近景视角",
+    "description": "室外商业建筑大模型测试，近景展示建筑立面、材质与广场细节。"
+  },
+  {
+    "src": "assets/BigModel-2.png",
+    "title": "商业建筑 · 俯视",
+    "alt": "ModraUp 实机截图：室外商业建筑大模型的俯视视角",
+    "description": "同一商业建筑大模型的俯视测试画面，展示建筑群、屋顶与场地布局。"
+  }
 ];
 const screenshotTabs = [...document.querySelectorAll('[data-screenshot]')];
 const screenshotDialog = document.getElementById('screenshot-dialog');
@@ -29,7 +60,7 @@ function selectScreenshot(index) {
   document.getElementById('lightbox-title').textContent = item.title;
   document.getElementById('screenshot-original').href = item.src;
   screenshotOpen.setAttribute('aria-label',(isEnglish ? 'Enlarge: ' : '放大查看：')+item.title);
-  const count = String(selectedScreenshot+1).padStart(2,'0')+' / 05';
+  const count = String(selectedScreenshot+1).padStart(2,'0')+' / '+String(screenshots.length).padStart(2,'0');
   document.getElementById('screenshot-count').textContent = count;
   document.getElementById('lightbox-count').textContent = count;
 }

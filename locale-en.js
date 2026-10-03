@@ -1,12 +1,43 @@
 // English copy for the shared screenshot gallery and feature panels.
 const englishCopy = {
   screenshots: [
-    {src:'assets/box-shadows.png', title:'Box & shadows', alt:'OpenSketch3D screenshot: a simple box with a ground shadow', description:'A simple solid and its ground shadow, showing basic modeling and shadow effects.'},
-    {src:'assets/ruby-3d-text.png', title:'Scripted 3D text', alt:'OpenSketch3D screenshot: 3D lettering created through the Ruby console', description:'Create 3D lettering through the Ruby console to explore scripted geometry.'},
-    {src:'assets/section-planes.png', title:'Section planes', alt:'OpenSketch3D screenshot: a section plane revealing internal model details', description:'Use section planes to inspect internal structures and construction details.'},
-    {src:'assets/large-terrain.png', title:'Terrain model test', alt:'OpenSketch3D screenshot: a terrain model with shadows and performance information', description:'A terrain model operation test, with the original viewport performance information.'},
-    {src:'assets/large-interior.png', title:'Interior model test', alt:'OpenSketch3D screenshot: a complex interior model with performance information', description:'A complex interior model operation test, showing scene detail and performance information.'}
-  ],
+  {
+    "src": "assets/SmallHouse.png",
+    "title": "Shadow effects",
+    "alt": "ModraUp screenshot: a small house with a ground shadow",
+    "description": "A small house and its ground shadow demonstrate shadow effects on architectural forms."
+  },
+  {
+    "src": "assets/Add3DText.png",
+    "title": "Scripted 3D text",
+    "alt": "ModraUp screenshot: ModraUp 3D lettering created with Ruby",
+    "description": "Create ModraUp 3D lettering through the Ruby console to explore scripted geometry."
+  },
+  {
+    "src": "assets/Secion.png",
+    "title": "Section planes",
+    "alt": "ModraUp screenshot: a kitchen model with multiple section planes",
+    "description": "Use multiple section planes to inspect the kitchen model and its construction details."
+  },
+  {
+    "src": "assets/BigTerrain.png",
+    "title": "Terrain model test",
+    "alt": "ModraUp screenshot: a large terrain model with performance information",
+    "description": "A large terrain model operation test, with the original viewport performance information."
+  },
+  {
+    "src": "assets/BigModel-1.png",
+    "title": "Commercial building \u00b7 Close-up",
+    "alt": "ModraUp screenshot: a close-up of a large outdoor commercial building model",
+    "description": "An outdoor commercial building model test, showing facade details, materials and the plaza."
+  },
+  {
+    "src": "assets/BigModel-2.png",
+    "title": "Commercial building \u00b7 Aerial",
+    "alt": "ModraUp screenshot: an aerial view of a large outdoor commercial building model",
+    "description": "An aerial test view of the same commercial building model, showing towers, rooftops and the site layout."
+  }
+],
   features: {
     modeling: {
       number:'01 / MODELING', title:['Draw a profile.','Give it depth.'],
