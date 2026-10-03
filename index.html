@@ -6,7 +6,14 @@
   <meta name="description" content="ModraUp，一款免费使用的桌面 3D 建模工具，支持 macOS、Windows 和 Linux。探索直观的绘图与推拉、组与组件、材质样式和 Ruby 扩展。">
   <meta name="theme-color" content="#2761ef">
   <title>ModraUp — 让想法，成为空间。</title>
+  <link rel="alternate" hreflang="zh-CN" href="index.html">
+  <link rel="alternate" hreflang="zh-Hant" href="zh-hant.html">
   <link rel="alternate" hreflang="en" href="en.html">
+  <link rel="alternate" hreflang="es" href="es.html">
+  <link rel="alternate" hreflang="fr" href="fr.html">
+  <link rel="alternate" hreflang="ja" href="ja.html">
+  <link rel="alternate" hreflang="ko" href="ko.html">
+  <link rel="alternate" hreflang="x-default" href="index.html">
   <link rel="icon" href="assets/logo.png">
   <link rel="stylesheet" href="styles.css">
   <script src="demo.js" defer></script>
@@ -15,7 +22,7 @@
   <header class="header">
     <a href="#" class="brand" aria-label="ModraUp 首页"><img src="assets/logo.png" alt="" width="36" height="36"><span>Modra<span class="brand-3d">Up</span></span></a>
     <nav aria-label="主导航"><a href="#features">功能探索</a><a href="#workflow">建模流程</a><a href="#questions">常见问题</a></nav>
-    <div class="header-actions"><a class="header-link" href="#project">项目进展 <span class="version">开发中</span></a><a class="language-switch" href="en.html" lang="en" hreflang="en" aria-label="Switch to English">English</a></div>
+    <div class="header-actions"><a class="header-link" href="#project">项目进展 <span class="version">开发中</span></a><details class="language-picker"><summary aria-label="选择语言">简体中文<span aria-hidden="true">⌄</span></summary><nav class="language-menu" aria-label="选择语言"><a href="index.html" lang="zh-CN" hreflang="zh-CN" aria-current="page">简体中文</a><a href="zh-hant.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a><a href="en.html" lang="en" hreflang="en">English</a><a href="es.html" lang="es" hreflang="es">Español</a><a href="fr.html" lang="fr" hreflang="fr">Français</a><a href="ja.html" lang="ja" hreflang="ja">日本語</a><a href="ko.html" lang="ko" hreflang="ko">한국어</a></nav></details></div>
   </header>
   <main>
     <section class="hero wrap">
@@ -55,7 +62,7 @@
 
     <section class="project-section wrap section" id="project"><div class="project-card"><div><p class="section-kicker">AN IDEA IN PROGRESS</p><h2>持续打磨，<br>逐步成形。</h2><p>ModraUp 免费使用，支持三大桌面平台。<br>目前处于开发阶段，各项功能正在持续完善。</p><a class="button primary" href="#questions">了解项目状态</a></div><div class="project-facts"><div><span>当前阶段</span><strong>开发中</strong><p>功能与交互持续迭代</p></div><div><span>桌面平台</span><strong>macOS · Windows · Linux</strong><p>支持三大桌面平台</p></div><div><span>项目源码</span><strong>暂未开放</strong><p>此页面用于产品与功能展示</p></div><div><span>模型文件</span><strong>.osk3d / .skp</strong><p>原生保存与 SKP 互换，支持范围见下方说明</p></div></div></div></section>
 
-    <section class="faq wrap section" id="questions"><div class="faq-title"><p class="section-kicker">A FEW THINGS TO KNOW</p><h2>你可能想了解。</h2></div><div class="faq-list"><details open><summary>软件可以免费使用吗？<span>+</span></summary><p>可以。ModraUp 免费使用，支持 macOS、Windows 和 Linux 桌面平台。目前项目源码暂未公开。</p></details><details><summary>现在可以下载使用吗？<span>+</span></summary><p>项目目前处于开发阶段，公开下载渠道和正式版本发布时间尚未确定。本页面展示当前功能，不提供安装包。</p></details><details><summary>ModraUp 已经开源了吗？<span>+</span></summary><p>目前项目源码暂未公开；如有开放计划，会另行说明。</p></details><details><summary>支持 SketchUp 模型文件吗？<span>+</span></summary><p>支持通过 OpenSKP 导入、导出 .skp 互换文件，原生项目格式为 .osk3d。SKP 互换不覆盖全部特性：含剖切实体的模型需要保存为 .osk3d，模型和场景阴影参数也不会通过 SKP 完整往返。</p></details><details><summary>现有 Ruby 插件可以直接运行吗？<span>+</span></summary><p>项目正在实现与 SketchUp 同名的 Ruby API，已包含扩展加载、Ruby 控制台、工具栏与 HTML 插件界面等能力。API 和行为尚未全部覆盖，具体插件需要逐项验证，暂不承诺完整兼容。</p></details><details><summary>这些展示画面来自哪里？<span>+</span></summary><p>这五张图片均为 ModraUp 的 macOS 实机截图，分别展示 阴影效果展示、脚本创建 3D 文字、剖切功能，以及地形和室内设计大模型的操作测试。大模型截图记录的是特定场景的测试状态，不代表所有模型的性能表现。</p></details></div></section>
+    <section class="faq wrap section" id="questions"><div class="faq-title"><p class="section-kicker">A FEW THINGS TO KNOW</p><h2>你可能想了解。</h2></div><div class="faq-list"><details open><summary>软件可以免费使用吗？<span>+</span></summary><p>可以。ModraUp 免费使用，支持 macOS、Windows 和 Linux 桌面平台。目前项目源码暂未公开。</p></details><details><summary>现在可以下载使用吗？<span>+</span></summary><p>项目目前处于开发阶段，公开下载渠道和正式版本发布时间尚未确定。本页面展示当前功能，不提供安装包。</p></details><details><summary>ModraUp 已经开源了吗？<span>+</span></summary><p>目前项目源码暂未公开；如有开放计划，会另行说明。</p></details><details><summary>支持 SketchUp 模型文件吗？<span>+</span></summary><p>支持通过 OpenSKP 导入、导出 .skp 互换文件，原生项目格式为 .osk3d。SKP 互换不覆盖全部特性：含剖切实体的模型需要保存为 .osk3d，模型和场景阴影参数也不会通过 SKP 完整往返。</p></details><details><summary>现有 Ruby 插件可以直接运行吗？<span>+</span></summary><p>项目正在实现与 SketchUp 同名的 Ruby API，已包含扩展加载、Ruby 控制台、工具栏与 HTML 插件界面等能力。API 和行为尚未全部覆盖，具体插件需要逐项验证，暂不承诺完整兼容。</p></details><details><summary>这些展示画面来自哪里？<span>+</span></summary><p>这六张图片均为 ModraUp 的 macOS 实机截图，分别展示小屋阴影、脚本创建 3D 文字、剖切功能、地形大模型，以及室外商业建筑大模型的两种视角。大模型截图记录的是特定场景的测试状态，不代表所有模型的性能表现。</p></details></div></section>
   </main>
   <footer class="footer wrap"><a href="#" class="brand"><img src="assets/logo.png" alt="" width="30" height="30"><span>Modra<span class="brand-3d">Up</span></span></a><span>让想法，成为空间。</span><span>© <span id="year">2026</span> ArchiNest Software Tech Limited <a href="#project">项目状态</a></span></footer>
 </body>

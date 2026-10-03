@@ -13,6 +13,24 @@
 .capture-frame{position:relative;display:block;width:100%;aspect-ratio:3456/2052}.paint-recolor{position:absolute;left:.78125%;top:33.04094%;width:1.50463%;height:2.43665%;overflow:hidden;background:#fff;pointer-events:none}.paint-recolor::after{content:"";position:absolute;width:150%;aspect-ratio:1268/1241;left:-24.2%;top:-22%;background:url("assets/paint-purple.png") center/100% 100% no-repeat}
 
 /* Language links stay visible on narrow screens. */
-.header-actions{display:flex;align-items:center;gap:22px;flex-shrink:0}.language-switch{font-size:12px;color:var(--blue);border:1px solid #dce5f5;padding:5px 10px;border-radius:5px;white-space:nowrap}.language-switch:hover{background:#f0f5ff}html[lang=en] .hero-row>div:first-child{max-width:720px}html[lang=en] .hero-aside{flex-shrink:0}html[lang=en] .detail-head{gap:12px}html[lang=en] .detail-badge{white-space:nowrap}
-@media(max-width:900px){html[lang=en] .header nav{gap:14px;font-size:13px}.header-actions{gap:14px}html[lang=en] .hero-aside{display:none}}
-@media(max-width:640px){.header{gap:12px}.header-actions{gap:10px}.language-switch{font-size:11px;padding:4px 7px}html[lang=en] .hero-tag{display:none}html[lang=en] h1{font-size:46px}html[lang=en] .hero-actions{flex-wrap:wrap}html[lang=en] .feature-tabs{gap:12px;overflow-x:auto}html[lang=en] .feature-tabs button{flex-shrink:0}html[lang=en] .project-facts{grid-template-columns:1fr 1fr}}
+.header-actions{display:flex;align-items:center;gap:22px;flex-shrink:0}.language-switch{font-size:12px;color:var(--blue);border:1px solid #dce5f5;padding:5px 10px;border-radius:5px;white-space:nowrap}.language-switch:hover{background:#f0f5ff}html:is([lang=en],[lang=es],[lang=fr]) .hero-row>div:first-child{max-width:720px}html:is([lang=en],[lang=es],[lang=fr]) .hero-aside{flex-shrink:0}html:is([lang=en],[lang=es],[lang=fr]) .detail-head{gap:12px}html:is([lang=en],[lang=es],[lang=fr]) .detail-badge{white-space:nowrap}
+@media(max-width:900px){html:is([lang=en],[lang=es],[lang=fr]) .header nav{gap:14px;font-size:13px}.header-actions{gap:14px}html:is([lang=en],[lang=es],[lang=fr]) .hero-aside{display:none}}
+@media(max-width:640px){.header{gap:12px}.header-actions{gap:10px}.language-switch{font-size:11px;padding:4px 7px}html:is([lang=en],[lang=es],[lang=fr]) .hero-tag{display:none}html:is([lang=en],[lang=es],[lang=fr]) h1{font-size:46px}html:is([lang=en],[lang=es],[lang=fr]) .hero-actions{flex-wrap:wrap}html:is([lang=en],[lang=es],[lang=fr]) .feature-tabs{gap:12px;overflow-x:auto}html:is([lang=en],[lang=es],[lang=fr]) .feature-tabs button{flex-shrink:0}html:is([lang=en],[lang=es],[lang=fr]) .project-facts{grid-template-columns:1fr 1fr}}
+
+/* Shared seven-language menu. Native details works without JavaScript. */
+.language-picker{position:relative;font-size:12px;z-index:20;color:var(--blue)}
+.language-picker summary{display:flex;align-items:center;gap:9px;list-style:none;cursor:pointer;border:1px solid #dce5f5;border-radius:5px;padding:5px 10px;white-space:nowrap;background:#fff}
+.language-picker summary::-webkit-details-marker{display:none}
+.language-picker summary>span{flex-shrink:0;width:12px;height:12px;font-size:0;background:center/12px 12px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5 6 7.5 9 4.5' fill='none' stroke='%232761ef' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.language-picker summary:hover,.language-picker[open] summary{background:#f0f5ff}
+.header .language-menu{display:flex;position:absolute;right:0;top:calc(100% + 8px);flex-direction:column;gap:3px;min-width:155px;padding:7px;border:1px solid #e1e8f3;border-radius:8px;background:#fff;box-shadow:0 8px 24px #19212f12;color:#535d6d;font-size:13px}
+.language-menu a{padding:7px 11px;border-radius:4px;white-space:nowrap}
+.language-menu a:hover,.language-menu a[aria-current=page]{background:#eef3ff;color:var(--blue)}
+html:not(:is([lang=zh-CN],[lang=zh-Hant])) .hero-aside{max-width:235px}
+html:not(:is([lang=zh-CN],[lang=zh-Hant])) .hero-aside>span:last-child{letter-spacing:0.5px}
+html:is([lang=es],[lang=fr]) .capability-strip strong{font-size:15px}
+html:is([lang=ja],[lang=ko]) h1{letter-spacing:-1px}
+@media(max-width:1100px){html:not(:is([lang=zh-CN],[lang=zh-Hant])) .header>nav{gap:15px;font-size:13px}html:not(:is([lang=zh-CN],[lang=zh-Hant])) .header .version{display:none}}
+@media(max-width:900px){html:not([lang=zh-CN]) .hero-aside{display:none}}
+@media(max-width:640px){.language-picker{font-size:11px}.language-picker summary{padding:4px 7px;gap:6px}html:not(:is([lang=zh-CN],[lang=zh-Hant])) .hero-tag{display:none}.eyebrow{flex-wrap:wrap}html:not(:is([lang=zh-CN],[lang=zh-Hant])) .feature-tabs{gap:16px;overflow-x:auto}html:not(:is([lang=zh-CN],[lang=zh-Hant])) .feature-tabs button{flex-shrink:0}html:is([lang=es],[lang=fr]) .hero-copy{font-size:14px}html:is([lang=ja],[lang=ko]) h1{font-size:44px}.detail-head{flex-wrap:wrap;gap:7px}.detail-badge{white-space:normal}.project-facts strong{overflow-wrap:anywhere}}
+@media(max-width:440px){html:not(:is([lang=zh-CN],[lang=zh-Hant])) .header-actions>.header-link{display:none}}

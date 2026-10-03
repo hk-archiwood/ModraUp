@@ -1,6 +1,22 @@
 // Screenshot gallery for the standalone product page.
-const isEnglish = document.documentElement.lang === 'en';
-const screenshots = isEnglish ? englishCopy.screenshots : [
+const languagePicker = document.querySelector('.language-picker');
+if (languagePicker) {
+  document.addEventListener('click', event => {
+    if (languagePicker.open && !languagePicker.contains(event.target)) {
+      languagePicker.open = false;
+    }
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && languagePicker.open) {
+      languagePicker.open = false;
+      languagePicker.querySelector('summary').focus();
+    }
+  });
+}
+const pageLanguage = document.documentElement.lang;
+const pageCopy = pageLanguage === 'en' ? englishCopy
+  : (typeof extraCopies !== 'undefined' ? extraCopies[pageLanguage] : null);
+const screenshots = pageCopy ? pageCopy.screenshots : [
   {
     "src": "assets/SmallHouse.png",
     "title": "阴影效果展示",
@@ -59,7 +75,7 @@ function selectScreenshot(index) {
   document.getElementById('screenshot-description').textContent = item.description;
   document.getElementById('lightbox-title').textContent = item.title;
   document.getElementById('screenshot-original').href = item.src;
-  screenshotOpen.setAttribute('aria-label',(isEnglish ? 'Enlarge: ' : '放大查看：')+item.title);
+  screenshotOpen.setAttribute('aria-label',(pageCopy ? (pageCopy.enlargeLabel || 'Enlarge: ') : '放大查看：')+item.title);
   const count = String(selectedScreenshot+1).padStart(2,'0')+' / '+String(screenshots.length).padStart(2,'0');
   document.getElementById('screenshot-count').textContent = count;
   document.getElementById('lightbox-count').textContent = count;
@@ -90,7 +106,7 @@ screenshotDialog.addEventListener('keydown',e => {
 document.getElementById('screenshot-previous').addEventListener('click',() => selectScreenshot(selectedScreenshot-1));
 document.getElementById('screenshot-next').addEventListener('click',() => selectScreenshot(selectedScreenshot+1));
 
-const features=isEnglish ? englishCopy.features : {
+const features=pageCopy ? pageCopy.features : {
   modeling:{number:'01 / MODELING',title:['画出轮廓，','推拉成形。'],description:'从直线、矩形和圆开始，用推拉赋予平面体积。捕捉端点、中点与交点，配合轴向锁定和数值输入，让直觉与精度一起工作。',tags:['绘图工具','推拉 / 偏移','移动 / 旋转 / 缩放','路径放样'],heading:'把想法变成几何',rows:[['R','从轮廓开始','直线、矩形、圆、多边形与圆弧。'],['P','建立体积','沿面法向推拉，支持定距与重复操作。'],['M','调整到位','移动、旋转、缩放，复制与阵列。']],footer:'推断捕捉 · 轴向锁定 · 数值输入'},
   organize:{number:'02 / ORGANIZATION',title:['把复杂模型，','整理得清清楚楚。'],description:'用群组隔离几何，用组件复用定义。双击进入嵌套层级，集中编辑当前内容；群组独立修改，组件共享变化，让重复设计更容易维护。',tags:['嵌套编辑','组件复用','组件浏览','复制与粘贴'],heading:'让每一部分各就其位',rows:[['G','整理几何','建立群组，整体移动、旋转或缩放。'],['C','复用组件','相同定义的多个实例共享编辑结果。'],['↳','进入层级','双击进入，Esc 返回上一层编辑上下文。']],footer:'群组隔离 · 定义复用 · 层级编辑'},
   appearance:{number:'03 / EXPRESSION',title:['给空间，','你自己的表达。'],description:'应用颜色与纹理，调整边线和显示样式，设置时间与太阳阴影。用场景保存观察状态，用剖切查看内部空间，辅以文字标注与 3D 文字。',tags:['材质与纹理','边线与样式','太阳阴影','剖切与文字'],heading:'从几何到空间表达',rows:[['色','设定材质','颜色、纹理、不透明度与视口取样。'],['光','观察阴影','调整日期与时间，观察太阳投影。'],['剖','看清内部','剖切裁切与填充，原生格式保留设置。']],footer:'场景视图 · 剖切平面 · 文字引注'},
